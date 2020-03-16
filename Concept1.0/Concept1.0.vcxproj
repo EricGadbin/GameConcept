@@ -144,17 +144,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimatedSprite.cpp" />
+    <ClCompile Include="animation.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="train.jpg" />
+    <Image Include="background.png" />
+    <Image Include="character1SpriteSheet.png" />
+    <Image Include="characterSpriteSheet.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="trainSong.ogg" />
+    <None Include="celeste.ogg" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimatedSprite.hpp" />
+    <ClInclude Include="animation.hpp" />
     <ClInclude Include="GameScene.hpp" />
     <ClInclude Include="Player.hpp" />
   </ItemGroup>

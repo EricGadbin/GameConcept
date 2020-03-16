@@ -24,14 +24,26 @@
     <ClCompile Include="GameScene.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="animation.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimatedSprite.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="train.jpg">
+    <Image Include="background.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="characterSpriteSheet.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="character1SpriteSheet.png">
       <Filter>Fichiers de ressources</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="trainSong.ogg">
+    <None Include="celeste.ogg">
       <Filter>Fichiers de ressources</Filter>
     </None>
   </ItemGroup>
@@ -40,6 +52,12 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="GameScene.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="animation.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedSprite.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
