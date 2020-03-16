@@ -144,13 +144,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="train.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="trainSong.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameScene.hpp" />
+    <ClInclude Include="Player.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
