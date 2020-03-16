@@ -33,7 +33,7 @@ Player::Player(std::string name, std::string image): _name(name), _image(image)
     _currentAnimation = &_walkingAnimationDown;
 
     // set up AnimatedSprite
-    _animatedSprite = AnimatedSprite(sf::seconds(0.2), true, false);
+    _animatedSprite = AnimatedSprite(sf::seconds(0.2), true, true);
     _animatedSprite.setPosition(sf::Vector2f(sf::Vector2i(1920, 1080) / 2));
 }
 
@@ -64,28 +64,24 @@ void Player::keyInputs(float &speed, bool &noKeyWasPressed, sf::Time *frameTime)
         _currentAnimation = &_walkingAnimationLeft;
         movement.x -= speed;
         noKeyWasPressed = false;
-		_sprite.move(-1.f, 0.f);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 	{
         _currentAnimation = &_walkingAnimationRight;
         movement.x += speed;
         noKeyWasPressed = false;
-		_sprite.move(1.f, 0.f);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
 	{
         _currentAnimation = &_walkingAnimationUp;
         movement.y -= speed;
         noKeyWasPressed = false;
-		_sprite.move(0.f, -1.f);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 	{
         _currentAnimation = &_walkingAnimationDown;
         movement.y += speed;
         noKeyWasPressed = false;
-		_sprite.move(0.f, 1.f);
 	}
 
     _animatedSprite.play(*_currentAnimation);
@@ -94,7 +90,7 @@ void Player::keyInputs(float &speed, bool &noKeyWasPressed, sf::Time *frameTime)
     // if no key was pressed stop the animation
     if (noKeyWasPressed)
     {
-        //_animatedSprite.stop();
+        _animatedSprite.stop();
     }
     noKeyWasPressed = true;
 
